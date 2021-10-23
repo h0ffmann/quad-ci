@@ -1,0 +1,66 @@
+name:                quad-ci
+version:             0.0.1-alpha
+#github:              "h0ffmann"
+license:             BSD3
+author:              "Matheus Hoffmann Fernandes Santos"
+maintainer:          "Matheus Hoffmann Fernandes Santos"
+copyright:           "2021 Hoffmann"
+
+description: The Simple Haskell Handbool implementation
+
+default-extensions:
+  - BlockArguments
+  - DeriveAnyClass
+  - DeriveGeneric
+  - LambdaCase
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - StrictData
+
+dependencies:
+  - aeson
+  - async
+  - base
+  - butcher
+  - hslogger
+  - http-client
+  - http-conduit
+  - http-types
+  - network
+  - record-hasfield
+  - rio
+  - scotty
+  - serialise
+  - stm
+  - time
+  - typed-process
+  - wai-cors
+  - yaml
+
+ghc-options:
+  - -F -pgmF=record-dot-preprocessor
+
+library:
+  source-dirs: src
+
+executables:
+  quad:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - quad-ci
+#  tests:
+#    quad-test:
+#      main: Spec.hs
+#      source-dirs: test
+#      ghc-options:
+#        - -threaded
+#        - -rtsopts
+#        - -with-rtsopts=-N
+#      dependencies:
+#        - quad
+#        - hspec
