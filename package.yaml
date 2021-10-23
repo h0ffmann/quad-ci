@@ -1,6 +1,6 @@
 name:                quad-ci
 version:             0.0.1-alpha
-#github:              "h0ffmann"
+github:              "h0ffmann/quad-ci"
 license:             BSD3
 author:              "Matheus Hoffmann Fernandes Santos"
 maintainer:          "Matheus Hoffmann Fernandes Santos"

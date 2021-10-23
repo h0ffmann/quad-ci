@@ -7,12 +7,17 @@ cabal-version: 1.12
 name:           quad-ci
 version:        0.0.1-alpha
 description:    The Simple Haskell Handbool implementation
+homepage:       https://github.com/h0ffmann/quad-ci#readme
+bug-reports:    https://github.com/h0ffmann/quad-ci/issues
 author:         Matheus Hoffmann Fernandes Santos
 maintainer:     Matheus Hoffmann Fernandes Santos
 copyright:      2021 Hoffmann
 license:        BSD3
-license-file:   LICENSE
 build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/h0ffmann/quad-ci
 
 library
   other-modules:
